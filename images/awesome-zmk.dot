@@ -1,0 +1,56 @@
+// dot -Tpng awesome-zmk.dot -o awesome-zmk.png
+
+digraph AwesomeZMK {
+    rankdir=TB; // Top to Bottom (You can use LR for Left to Right)
+    node [shape=box, style="filled,rounded", fontname="Arial", fontsize=12];
+    edge [fontname="Arial", fontsize=10, color="#555555"];
+
+    // Main Nodes
+    AwesomeZMK [label="Awesome-ZMK\n(Curated List of Resources)", shape=doubleoctagon, fillcolor="#9AD0EC", style="filled,rounded,bold", fontsize=16, color="#4A90E2", penwidth=2];
+
+    // List Categories
+    FirmwareCore [label="Firmware Core", fillcolor="#C7E9B0"];
+    Keyboards [label="Supported Keyboards", fillcolor="#C7E9B0"];
+    Modules [label="Modules and Shields", fillcolor="#C7E9B0"];
+    Tools [label="Tools and Utilities", fillcolor="#C7E9B0"];
+    Documentation [label="Documentation and Guides", fillcolor="#C7E9B0"];
+    Community [label="Community and Examples", fillcolor="#C7E9B0"];
+
+    // Key elements of the ZMK ecosystem
+    ZMK_Core [label="ZMK Firmware\n(Core)", shape=ellipse, fillcolor="#FFD700"];
+    ZephyrRTOS [label="Zephyr™ RTOS\n(Firmware Base)", shape=ellipse, fillcolor="#DDA0DD"];
+    MCU_Support [label="MCU Support\n(nRF, RP2020, etc.)", fillcolor="#FFB6C1"];
+    Bluetooth_LE [label="Bluetooth LE\n(Wireless Connectivity)", fillcolor="#FFB6C1"];
+    Configurator [label="ZMK Configurator\n(Web UI)", fillcolor="#F0E68C"];
+    VSCode [label="VS Code / CLI\n(Development)", fillcolor="#F0E68C"];
+    KeymapExamples [label="Keymap Examples", fillcolor="#C7E9B0"];
+    BuildGuides [label="Build Guides", fillcolor="#C7E9B0"];
+
+
+    // Relationships from the Awesome List to its categories
+    AwesomeZMK -> FirmwareCore [label="covers"];
+    AwesomeZMK -> Keyboards [label="lists"];
+    AwesomeZMK -> Modules [label="includes"];
+    AwesomeZMK -> Tools [label="recommends"];
+    AwesomeZMK -> Documentation [label="links to"];
+    AwesomeZMK -> Community [label="highlights"];
+
+    // Relationships of the ZMK ecosystem within categories
+    FirmwareCore -> ZMK_Core [label="details"];
+    ZMK_Core -> ZephyrRTOS [label="built on", color="#C0392B", penwidth=1.5]; // Strong relationship
+    ZephyrRTOS -> MCU_Support [label="supports"];
+    ZMK_Core -> Bluetooth_LE [label="uses for", style=dashed]; // Important, but abstract relationship
+
+    Tools -> Configurator [label="is a"];
+    Tools -> VSCode [label="allows"];
+
+    Keyboards -> MCU_Support [label="use"]; // Keyboards use MCUs
+    Modules -> MCU_Support [label="often integrate"]; // Modules integrate MCUs
+
+    Documentation -> BuildGuides [label="offers"];
+    Community -> KeymapExamples [label="shares"];
+
+    // Relationships of ZMK Core to other categories
+    ZMK_Core -> KeymapExamples [label="defines the"];
+    ZMK_Core -> BuildGuides [label="instructions for"];
+}

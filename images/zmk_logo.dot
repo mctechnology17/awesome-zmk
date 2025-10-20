@@ -1,0 +1,57 @@
+// dot -Tpng zmk_logo.dot -o zmk_logo.png
+// dot -Tpng zmk_logo.dot -o zmk_logo_github_banner.png
+digraph ZMK_Logo {
+    graph [
+        layout=neato,           // allows manual positioning
+        bgcolor="transparent"   // Transparent Fund for the Logo
+
+	// only for github banner
+	/*
+        dpi=96,                 // Set the image resolution
+        size="13.3,6.6",        // Create a canvas of 1280x640px (13.3" x 6.6" @ 96dpi)
+        pad="2,0"               // Add horizontal filling to focus the logo
+	*/
+    ];
+
+    // Base style for text nodes
+    node [
+        shape=plaintext,        // Without edges or shapes
+        fontname="Arial Black"  // thick and modern source
+    ];
+
+    // main text node
+    AwesomeZMK [
+        label="AWESOME",
+        // label="AWESOME ZMK",
+        fontsize=48,
+        fontcolor="#533FCD",    // Blue of Zmk #533FCD
+        pos="0,0!"              // Center position
+    ];
+
+    // node for wireless icon
+    node [
+        fontcolor="#533FCD"     // color
+    ];
+
+    // icon right
+    Arc1 [ label=")", fontsize=18, pos="4.1,0!" ];
+    Arc2 [ label=")", fontsize=32, pos="4.4,0!" ];
+    Arc3 [ label=")", fontsize=46, pos="4.7,0!" ];
+
+    // icon left
+    LeftArc1 [ label="(", fontsize=18, pos="-4.1,0!" ];
+    LeftArc2 [ label="(", fontsize=32, pos="-4.4,0!" ];
+    LeftArc3 [ label="(", fontsize=46, pos="-4.7,0!" ];
+
+    /*
+    // icon top
+    TopArc1 [ label="^", fontsize=18, pos="0,1.0!" ];
+    TopArc2 [ label="^", fontsize=32, pos="0,1.3!" ];
+    TopArc3 [ label="^", fontsize=46, pos="0,1.6!" ];
+
+    // icon bottom
+    BottomArc1 [ label="v", fontsize=18, pos="0,-1.0!" ];
+    BottomArc2 [ label="v", fontsize=32, pos="0,-1.3!" ];
+    BottomArc3 [ label="v", fontsize=46, pos="0,-1.6!" ];
+    */
+}
