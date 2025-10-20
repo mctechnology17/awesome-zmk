@@ -405,7 +405,7 @@ Wired - Seeed XIAO Interconnect (RP2040 and others)
 * [ErgoMechKeyboards/reddit.com](https://www.reddit.com/r/ErgoMechKeyboards/) - A community focused around Ergonomic Mechanical Keyboards and strange input devices. Embrace the jank. Created Sep 2, 2019
 * [crkbd/reddit.com](https://www.reddit.com/r/crkbd/) - crkbd, a.k.a. Corne Keyboard https://github.com/foostan/crkbd https://discord.com/invite/aWCZWnS Created Dec 16, 2019
 
-### Keyboard News ErgoMechKeyboards
+<!-- ### Keyboard News ErgoMechKeyboards -->
 <!-- REDDIT:START -->
 <!-- REDDIT:END -->
 
