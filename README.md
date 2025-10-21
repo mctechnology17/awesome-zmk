@@ -18,7 +18,7 @@ A curated list of awesome ZMK firmware resources, links, zmk-config's, zmk-drive
 - [Community zmk-config user configurations](#community-zmk-config-user-configurations)
   - [Split Wired](#split-wired)
 - [Community Documentation](#community-documentation)
-  - [Awesome List](#awesome-list)
+  - [Useful Awesome List](#useful-awesome-list)
   - [Vendor Documentation](#vendor-documentation)
 - [Community firmware Modules and Behaviors](#community-firmware-modules-and-behaviors)
   - [Custom Behaviors](#custom-behaviors)
@@ -28,6 +28,7 @@ A curated list of awesome ZMK firmware resources, links, zmk-config's, zmk-drive
     - [Drivers Trackpoint](#drivers-trackpoint)
     - [Drivers Analog Joystick](#drivers-analog-joystick)
     - [Drivers Haptic](#drivers-haptic)
+    - [Drivers Display](#drivers-display)
     - [Drivers LEDS Backlight Underglow](#drivers-leds-backlight-underglow)
     - [Drivers Others](#drivers-others)
   - [Display Modules](#display-modules)
@@ -40,6 +41,8 @@ A curated list of awesome ZMK firmware resources, links, zmk-config's, zmk-drive
   - [Power Estimation](#power-estimation)
   - [Display Utilities](#display-utilities)
   - [RAW HID Host](#raw-hid-host)
+  - [CLI and Utilities](#cli-and-utilities)
+- [Community Pointing Projects as Computer Mouse](#community-pointing-projects-as-computer-mouse)
 - [Guides and Tutorials](#guides-and-tutorials)
   - [Solder and Desolder Tools](#solder-and-desolder-tools)
   - [How to Solder](#how-to-solder)
@@ -129,6 +132,8 @@ ZSWatch - Zephyr Smartwatch:
 
 ### Split Wired
 
+* [ZMK Documentation Wired Splits](https://zmk.dev/docs/config/split#wired-splits) - **WARNING** Hardware UARTs have a few different modes/approaches to sending and receiving data, with different levels of complexity and performance...
+* [ZMK Documentation Wired Splits (Board Pin Control - rp2040)](https://zmk.dev/docs/development/hardware-integration/pinctrl) - **WARNING** The details of pin control can vary from vendor to vendor.
 * [petejohanson/splitkb-halcyon-zmk-config](https://github.com/petejohanson/splitkb-halcyon-zmk-config) - Unofficial [splitkb.com Halcyon](https://splitkb.com/products/halcyon-kyria?srsltid=AfmBOoo-Cv2EjX1G1NHV5swo4dR6QqYDoxO30uTHhAOrlnbu1AvAVtPW) ZMK Config
 * [petejohanson/splitkb-halcyon-zmk-module](https://github.com/petejohanson/splitkb-halcyon-zmk-module) - SplitKB Halcyon ZMK Module
 * [paulshir/zmk-board-iris-ce](https://github.com/paulshir/zmk-board-iris-ce.git) - ZMK board definition for Iris CE by Keebio
@@ -166,23 +171,30 @@ ZSWatch - Zephyr Smartwatch:
 ### Custom Behaviors
 
 * [ZMK Behaviors Documentation](https://zmk.dev/docs/keymaps/behaviors) - Official documentation on how behaviors work.
-* [dhruvinsh/zmk-tri-state](https://github.com/dhruvinsh/zmk-tri-state) - Tri-state (swapper) implementation.
-* [dhruvinsh/zmk-num-word](https://github.com/dhruvinsh/zmk-num-word) - Num-word implementation.
-* [badjeff/zmk-split-peripheral-input-relay](https://github.com/badjeff/zmk-split-peripheral-input-relay) - This module adds an input relay to the input subsystem for ZMK. This would allow, for example, sending trackpoint events from the peripheral to the center split.
-* [badjeff/zmk-split-peripheral-output-relay](https://github.com/badjeff/zmk-split-peripheral-output-relay) - This is a [ZMK](https://zmk.dev) *Split Transport* module adding support for [Enhanced ShockBurst (ESB)](https://docs.nordicsemi.com/bundle/ncs-latest/page/nrf/protocols/esb/index.html) protocol on Nordic nRF5 Series device.
-* [badjeff/zmk-split-peripheral-bonding-tweak](https://github.com/badjeff/zmk-split-peripheral-bonding-tweak) - This an experimental of an experimental module that grant ability to a split central and peripherals to bond on top of a forgettable bluetooth pairing. Two add-on feature are designed to serve this purpose on ZMK.
-* [badjeff/zmk-behavior-insomnia](https://github.com/badjeff/zmk-behavior-insomnia/) - Insomnia Behavior for ZMK. This module prevents the board from entering sleep mode if BLE is connected, useful for multi-peripheral setups to avoid continuous BLE advertisement scanning.
-* [badjeff/zmk-output-behavior-listener](https://github.com/badjeff/zmk-output-behavior-listener) - It allows to config a feedback of state change event by binding behaviors to feedback devices, such as, eccentric rotating mass (ERM) motors, Linear Resonant Actuator (LRA) vibration motors, LED indicators, serve motors, motorized fader, etc. It is made for simulating various feedback effect pattern in a designed sequence on devices simultaneously.
-* [badjeff/zmk-input-processor-mixer](https://github.com/badjeff/zmk-input-processor-mixer) - This module interrupt, combine, sync incoming input events from Zephyr input subsystem for ZMK.
-* [badjeff/zmk-feature-split-esb](https://github.com/badjeff/zmk-feature-split-esb)
+* [urob/zmk-helpers](https://github.com/urob/zmk-helpers) - Convenience macros simplifying ZMK's keymap configuration
 * [urob/zmk-auto-layer](https://github.com/urob/zmk-auto-layer) - Auto-layer (including num-word) implementation.
 * [urob/zmk-adaptive-key](https://github.com/urob/zmk-adaptive-key) - A ZMK module adding a adaptive-key behavior.
 * [urob/zmk-leader-key](https://github.com/urob/zmk-leader-key) - A ZMK module adding a leader-key behavior.
+* [urob/zmk-unicode](https://github.com/urob/zmk-unicode) - ZMK module for Unicode input
+* [dhruvinsh/zmk-tri-state](https://github.com/dhruvinsh/zmk-tri-state) - Tri-state (swapper) implementation.
+* [dhruvinsh/zmk-num-word](https://github.com/dhruvinsh/zmk-num-word) - Num-word implementation.
+* [badjeff/zmk-split-peripheral-bonding-tweak](https://github.com/badjeff/zmk-split-peripheral-bonding-tweak) - This an experimental of an experimental module that grant ability to a split central and peripherals to bond on top of a forgettable bluetooth pairing. Two add-on feature are designed to serve this purpose on ZMK.
+* [badjeff/zmk-hid-io](https://github.com/badjeff/zmk-hid-io) - This module add new HID Usage Page for ZMK.
+* [badjeff/zmk-split-peripheral-input-relay](https://github.com/badjeff/zmk-split-peripheral-input-relay) - This would allow, for example, sending trackpoint events from the peripheral to the center split.
+* [badjeff/zmk-split-peripheral-output-relay](https://github.com/badjeff/zmk-split-peripheral-output-relay) - This is a [ZMK](https://zmk.dev) *Split Transport* module adding support for [Enhanced ShockBurst (ESB)](https://docs.nordicsemi.com/bundle/ncs-latest/page/nrf/protocols/esb/index.html) protocol on Nordic nRF5 Series device.
+* [badjeff/zmk-split-peripheral-bonding-tweak](https://github.com/badjeff/zmk-split-peripheral-bonding-tweak) - This an experimental of an experimental module that grant ability to a split central and peripherals to bond on top of a forgettable bluetooth pairing.
+* [badjeff/zmk-behavior-insomnia](https://github.com/badjeff/zmk-behavior-insomnia/) - Insomnia Behavior for ZMK. This module prevents the board from entering sleep mode if BLE is connected, useful for multi-peripheral setups to avoid continuous BLE advertisement scanning.
+* [badjeff/zmk-output-behavior-listener](https://github.com/badjeff/zmk-output-behavior-listener) - It allows to config a feedback of state change event by binding behaviors to feedback devices, such as, eccentric rotating mass (ERM) motors, Linear Resonant Actuator (LRA) vibration motors, LED indicators, serve motors, motorized fader, etc.
+* [badjeff/zmk-input-processor-mixer](https://github.com/badjeff/zmk-input-processor-mixer) - This module interrupt, combine, sync incoming input events from Zephyr input subsystem for ZMK.
+* [badjeff/zmk-feature-split-esb](https://github.com/badjeff/zmk-feature-split-esb)
+* [badjeff/zmk-behavior-key-press-lip](https://github.com/badjeff/zmk-behavior-key-press-lip) - Implementation of [Last Input Priority](https://www.hitboxarcade.com/blogs/support/what-is-socd) key press favor for ZMK.
+* [badjeff/zmk-input-processor-xyz](https://github.com/badjeff/zmk-input-processor-xyz) - This module is used to quantize X and Y value set to fit inside single payload of pointing device on split peripheral, to reduce the bluetooth connection loading between the peripherals and the central.
 * [ssbb/zmk-antecedent-morph](https://github.com/ssbb/zmk-antecedent-morph) - ZMK Antecedent Morph Behavior aka Adaptive Keys.
 * [ssbb/zmk-deadkey-slayer](https://github.com/ssbb/zmk-deadkey-slayer) - A ZMK module to drop illegal keycodes.
 * [ssbb/zmk-listeners](https://github.com/ssbb/zmk-listeners)- ZMK module to invoke behaviors on certain events.
 * [zzeneg/zmk-raw-hid](https://github.com/zzeneg/zmk-raw-hid) - ZMK module for Raw HID communication
 * [englmaxi/zmk-hid-trackball-interface](https://github.com/englmaxi/zmk-hid-trackball-interface) - ZMK trackball interface using HID indicators
+* [elpekenin/zmk-userspace](https://github.com/elpekenin/zmk-userspace) - "tiny" and "useful" bits to reuse across ZMK boards
 
 ### Drivers
 
@@ -190,6 +202,7 @@ ZSWatch - Zephyr Smartwatch:
 * [petejohanson/cirque-input-module](https://github.com/petejohanson/cirque-input-module) - Zephyr module for the Cirque Pinnacle input driver.
 * [AYM1607/zmk-driver-azoteq-iqs5xx](https://github.com/AYM1607/zmk-driver-azoteq-iqs5xx) - ZMK driver for Azoteq IQS5XX trackpads
 * [sekigon-gonnoc/iqs7211e-trackpad-module](https://github.com/sekigon-gonnoc/iqs7211e-trackpad-module) - iQS7211E sensor driver with 30 mm diameter trackpad, low consumption (~ 1.5 mA) and admits multitactile (two points).
+
 #### Drivers Trackball
 * [badjeff/zmk-pmw3610-driver](https://github.com/badjeff/zmk-pmw3610-driver) - PMW3610 sensor driver.
 * [badjeff/zmk-paw3395-driver](https://github.com/badjeff/zmk-paw3395-driver) - This is an ZMK pointer input module, that grant ability to call a non-disclosed PAW3395 driver library.
@@ -197,25 +210,44 @@ ZSWatch - Zephyr Smartwatch:
 * [inorichi/zmk-pmw3610-driver](https://github.com/inorichi/zmk-pmw3610-driver) - PMW3610 sensor driver.
 * [twinoner/t0bybr_pim447](https://github.com/twinoner/t0bybr_pim447) - Pimoroni PIM447 trackball driver
 * [t0bybr/pim447](https://github.com/t0bybr/pim447) - Pimoroni PIM447 trackball driver
+* [sekigon-gonnoc/zmk-driver-paw3222](https://github.com/sekigon-gonnoc/zmk-driver-paw3222) - This driver enables the use of the PIXART PAW3222 optical sensor with the ZMK framework.
+
 #### Drivers Trackpoint
 * [badjeff/kb_zmk_ps2_mouse_trackpoint_driver](https://github.com/badjeff/kb_zmk_ps2_mouse_trackpoint_driver) - PS/2 trackpoint driver fork updated for mainline ZMK.
 * [infused-kim/zmk-ps2-mouse-trackpoint-driver](https://github.com/infused-kim/kb_zmk_ps2_mouse_trackpoint_driver) - PS/2 trackpoint driver.
+
 #### Drivers Analog Joystick
-* [badjeff/zmk-analog-input-driver](https://github.com/badjeff/zmk-analog-input-driver) - This driver groups ADC io channels into single input event for input subsystem. It provides config for thumbstick input with mid-point alignment, min-mav limitation, deadzone, sampling rate, reporting rate, multiplier, divisor, invertor, etc.
+* [badjeff/zmk-analog-input-driver](https://github.com/badjeff/zmk-analog-input-driver) - This driver groups ADC io channels into single input event for input subsystem.
+
 #### Drivers Haptic
 * [badjeff/zmk-drv2605-driver](https://github.com/badjeff/zmk-drv2605-driver/) - DRV2605 haptic feedback driver.
+
+#### Drivers Display
+* [mctechnology17/zmk-oled-adapter](https://github.com/mctechnology17/zmk-oled-adapter) - use different OLED screen sizes without modifying code (for 128x32, 128x64 and 128x128 OLED screens)
+* [MickiusMousius/zmk-ls0xxvcom-driver](https://github.com/MickiusMousius/zmk-ls0xxvcom-driver) - Zephyr driver for LS0XX displays with the VCOM fix applied
+
 #### Drivers LEDS Backlight Underglow
+> [!NOTE]
+> [elpekenin/zmk-userspace](https://github.com/elpekenin/zmk-userspace) These drivers can be easily located here and not only in behaviors
+
 * [caksoylar/zmk-rgbled-widget](https://github.com/caksoylar/zmk-rgbled-widget) - A ZMK module to add battery & BT indicators using an RGB LED (like in Xiao BLEs).
+* [sekigon-gonnoc/zmk-feature-status-led](https://github.com/sekigon-gonnoc/zmk-feature-status-led) - This module provides LED status indicators for ZMK keyboards using gpio-leds.
+* [joelspadin/zmk-keyboards](https://github.com/joelspadin/zmk-keyboards) - marten_numpad and indicator LEDs driver
+* [dhruvinsh/zmk-config](https://github.com/dhruvinsh/zmk-config/tree/legacy) - **legacy branch** This repository tracks my keyboard configuration.
+* [englmaxi/zmk-config](https://github.com/englmaxi/zmk-config/tree/main/boards/shields/led_indicator) - single LED indicator widget based on [caksoylar/zmk-rgbled-widget](https://github.com/caksoylar/zmk-rgbled-widget)
+
 #### Drivers Others
 * [badjeff/zmk-adns9800-driver](https://github.com/badjeff/zmk-adns9800-driver) - ADNS9800 sensor driver.
+* [badjeff/zmk-tb6612fng-driver](https://github.com/badjeff/zmk-tb6612fng-driver) - This module exposes TB6612FNG inputs via Zephyr's sensor_driver_api and key press behavior.
+* [badjeff/zmk-drv883x-driver](https://github.com/badjeff/zmk-drv883x-driver) - This module exposes DRV883x inputs via Zephyr's sensor_driver_api and key press behavior.
 * [petejohanson/ec-support-zmk-module](https://github.com/petejohanson/ec-support-zmk-module) - Electrostatic Capacitive (Topre) matrix scan implementation.
+* [sekigon-gonnoc/zmk-feature-non-lipo-battery-management](https://github.com/sekigon-gonnoc/zmk-feature-non-lipo-battery-management) - This module provides battery management functionality for non-LiPo batteries (such as alkaline or NiMH) in ZMK keyboards. It includes voltage monitoring, battery percentage calculation, and power management features.
 
 ### Display Modules
 
 * [mctechnology17/zmk-nice-oled](https://github.com/mctechnology17/zmk-nice-oled) - vertical widgets for oled and niceview screens using zmk (for split and non-split keyboards)
-* [mctechnology17/zmk-oled-adapter](https://github.com/mctechnology17/zmk-oled-adapter) - use different OLED screen sizes without modifying code (for 128x32, 128x64 and 128x128 OLED screens)
 * [mctechnology17/zmk-dongle-display-view](https://github.com/mctechnology17/zmk-dongle-display-view) - horizontal widgets for keyboards with dongles, splits and non-splits using the nice!view (bongocat, wpm, caps, batt, etc.)
-* [MickiusMousius/zmk-ls0xxvcom-driver](https://github.com/MickiusMousius/zmk-ls0xxvcom-driver) - Zephyr driver for LS0XX displays with the VCOM fix applied
+* [MickiusMousius/RolioFirmware (for Vista508)](https://github.com/MickiusMousius/RolioFirmware) - The Vista508 is a low-power, high refresh rate display meant to replace I2C OLEDs traditionally used.
 * [M165437/nice-view-gem](https://github.com/M165437/nice-view-gem) - A sleek customization for the nice!view shield
 * [zzeneg/zmk-nice-view-hid](https://github.com/zzeneg/zmk-nice-view-hid) - ZMK module for nice!view widget with Raw HID functionality
 * [infely/nice-view-battery](https://github.com/infely/nice-view-battery) - A clean customization for the nice!view displays
@@ -243,6 +275,7 @@ ZSWatch - Zephyr Smartwatch:
 * [janpfischer/zmk-dongle-screen](https://github.com/janpfischer/zmk-dongle-screen.git) - YADS - Yet another Dongle Screen for ZMK
 * [victorlucachi/charybdis-zmk-module](https://github.com/victorlucachi/charybdis-zmk-module) - zmk module for bkb charybdis mini/nano with pmw3610 and xiao/nicenano dongle
 * [joaopedropio/snake-module](https://github.com/joaopedropio/snake-module.git) - Snake Dongle Shell 🐍
+* [dhruvinsh/zmk-prospector](https://github.com/dhruvinsh/zmk-prospector) - Prospector but for ST7735S display
 
 ##### Dongles Design
 * [carrefinho/prospector](https://github.com/carrefinho/prospector) - Desktop ZMK Dongle with color 1.69-inch IPS LCD screen with curved cover glass screen
@@ -295,6 +328,7 @@ ZSWatch - Zephyr Smartwatch:
     * [nickcoutsos/keymap-layout-tools](https://github.com/nickcoutsos/keymap-layout-tools) - source code on GitHub
 * [joelspadin/zmk-locale-generator](https://github.com/joelspadin/zmk-locale-generator) - Python module to generate localized keyboard layout headers for ZMK Firmware.
 * [An experimental tool to create ZMK shields by Genteure](https://shield-wizard.genteure.workers.dev) - A web-based tool to create ZMK configurations for custom keyboards.
+* [MrMarble/zmk-viewer](https://github.com/MrMarble/zmk-viewer) - cli tool to generate preview images from a zmk .keymap file
 
 ### Power Estimation
 
@@ -316,6 +350,15 @@ ZSWatch - Zephyr Smartwatch:
 ### RAW HID Host
 * [zzeneg/qmk-hid-host](https://github.com/zzeneg/qmk-hid-host) - ZMK and QMK HID Host. Host component for communicating with ZMK and QMK keyboards using Raw HID feature.
 * [badjeff/zmk-companion-macos](https://github.com/badjeff/zmk-companion-macos) - ZMK Companion. A main menu macOS application communicate to ZMK powered HID device.
+
+### CLI and Utilities
+* [zmkfirmware/zmk-cli](https://github.com/zmkfirmware/zmk-cli) - Command line tool for ZMK Firmware
+* [zmkfirmware/zmk-docker](https://github.com/zmkfirmware/zmk-docker) - Lightweight Docker images for ZMK
+* [urob/zmk-actions](https://github.com/urob/zmk-actions) - Github workflows for maintaining ZMK modules
+
+## Community Pointing Projects as Computer Mouse
+* [badjeff/leylabella-zmk-config](https://github.com/badjeff/leylabella-zmk-config) - This is the ZMK firmware config repository for [leylabella](https://github.com/badjeff/leylabella), a computer mouse 🐭.
+* [badjeff/moudabella-zmk-config](https://github.com/badjeff/moudabella-zmk-config) - This is the ZMK firmware config repository for [moudabella](https://github.com/badjeff/moudabella), an open source bluetooth mouse 🐭 for CAD 🐱.
 
 ## Guides and Tutorials
 
@@ -421,6 +464,9 @@ Wired - Seeed XIAO Interconnect (RP2040 and others)
   * [Adv360-Pro-ZMK source code on GitHub](https://github.com/KinesisCorporation/Adv360-Pro-ZMK) - Production repository for the all-new Advantage360 Professional using ZMK engine
 * [Disconnect MK1](https://www.hidergo.fi/) - The culmination of function, productivity and appearance. Disconnect MK1 is the ultimate keyboard for work and play.
   * [osmakari/zmk source code on GitHub](https://github.com/osmakari/zmk) - For the curious, we keep the firmware open source! You are free to hack away on the firmware and make it truly your own!
+* [taichan1113/AdeptBLE](https://github.com/taichan1113/AdeptBLE) - This is alpha version of Ploopy Adept BLE modification.
+  * [Post on reddit](https://www.reddit.com/r/Trackballs/comments/rtmeeq/a_portable_trackball_i_wanted_zmk_powered_some/)
+  * [Video and photos](https://imgur.com/gallery/zmk-trackball-prototype-RhXke0e)
 
 ## Related projects
 
