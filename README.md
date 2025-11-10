@@ -42,6 +42,7 @@ A curated list of awesome ZMK firmware resources, links, zmk-config's, zmk-drive
   - [Display Utilities](#display-utilities)
   - [RAW HID Host](#raw-hid-host)
   - [CLI and Utilities](#cli-and-utilities)
+- [Hardware Addons must-have](#hardware-addons-must-have)
 - [Community Pointing Projects as Computer Mouse](#community-pointing-projects-as-computer-mouse)
 - [Guides and Tutorials](#guides-and-tutorials)
   - [Solder and Desolder Tools](#solder-and-desolder-tools)
@@ -54,7 +55,6 @@ A curated list of awesome ZMK firmware resources, links, zmk-config's, zmk-drive
   - [Learn Touch Typing](#learn-touch-typing)
 - [Keyboard Shops](#keyboard-shops)
 - [Keyboard News](#keyboard-news)
-  - [Keyboard News ErgoMechKeyboards](#keyboard-news-ergomechkeyboards)
 - [Projects using ZMK closed-source or not upstreamed](#projects-using-zmk-closed-source-or-not-upstreamed)
 - [Related projects](#related-projects)
 - [License](#license)
@@ -189,12 +189,14 @@ ZSWatch - Zephyr Smartwatch:
 * [badjeff/zmk-feature-split-esb](https://github.com/badjeff/zmk-feature-split-esb)
 * [badjeff/zmk-behavior-key-press-lip](https://github.com/badjeff/zmk-behavior-key-press-lip) - Implementation of [Last Input Priority](https://www.hitboxarcade.com/blogs/support/what-is-socd) key press favor for ZMK.
 * [badjeff/zmk-input-processor-xyz](https://github.com/badjeff/zmk-input-processor-xyz) - This module is used to quantize X and Y value set to fit inside single payload of pointing device on split peripheral, to reduce the bluetooth connection loading between the peripherals and the central.
+* [badjeff/zmk-behavior-battery-percentage-printer](https://github.com/badjeff/zmk-behavior-battery-percentage-printer) - This is a modified version of [alan0ford's behavior_battery_printer.c](https://github.com/alan0ford/zmk-lplancks/blob/GHPilotBatt/boards/shields/lplancks/behavior_battery_printer.c). Changes has been added to make the behavior awaring of peripheral id.
 * [ssbb/zmk-antecedent-morph](https://github.com/ssbb/zmk-antecedent-morph) - ZMK Antecedent Morph Behavior aka Adaptive Keys.
 * [ssbb/zmk-deadkey-slayer](https://github.com/ssbb/zmk-deadkey-slayer) - A ZMK module to drop illegal keycodes.
 * [ssbb/zmk-listeners](https://github.com/ssbb/zmk-listeners)- ZMK module to invoke behaviors on certain events.
 * [zzeneg/zmk-raw-hid](https://github.com/zzeneg/zmk-raw-hid) - ZMK module for Raw HID communication
 * [englmaxi/zmk-hid-trackball-interface](https://github.com/englmaxi/zmk-hid-trackball-interface) - ZMK trackball interface using HID indicators
 * [elpekenin/zmk-userspace](https://github.com/elpekenin/zmk-userspace) - "tiny" and "useful" bits to reuse across ZMK boards
+* [george-norton/zmk-behavior-sensor-attr-cycle](https://github.com/george-norton/zmk-behavior-sensor-attr-cycle) - A ZMK behaviour for cycling sensor attributes
 
 ### Drivers
 
@@ -202,6 +204,10 @@ ZSWatch - Zephyr Smartwatch:
 * [petejohanson/cirque-input-module](https://github.com/petejohanson/cirque-input-module) - Zephyr module for the Cirque Pinnacle input driver.
 * [AYM1607/zmk-driver-azoteq-iqs5xx](https://github.com/AYM1607/zmk-driver-azoteq-iqs5xx) - ZMK driver for Azoteq IQS5XX trackpads
 * [sekigon-gonnoc/iqs7211e-trackpad-module](https://github.com/sekigon-gonnoc/iqs7211e-trackpad-module) - iQS7211E sensor driver with 30 mm diameter trackpad, low consumption (~ 1.5 mA) and admits multitactile (two points).
+* [ZitaoTech/zmk-config-9981-pro](https://github.com/ZitaoTech/zmk-config-9981-pro/tree/main) - zmk firmware config for 9981 keyboard with trackpad(pro version)
+  * [Full Guide](https://github.com/ZitaoTech/9981_BLE_USB_Keyboard_Pro/tree/main) - The fully open-sourced P9981 BLE&USB Keyboard is the smallest ZMK-powered keyboard mouse combo and features n-Key rollover that other original blackberry keyboards don't have!
+  * [HackberryPi-4B example](https://github.com/ZitaoTech/HackberryPi-4B) - A handheld Linux device using Raspberry Pi4B as Core with 4" 720X720 TFT Touch display
+  * [zmk fork](https://github.com/ZitaoTech/zmk/tree/bbkeyboard_tp/app/module/drivers/sensor/a320)
 
 #### Drivers Trackball
 * [badjeff/zmk-pmw3610-driver](https://github.com/badjeff/zmk-pmw3610-driver) - PMW3610 sensor driver.
@@ -211,6 +217,7 @@ ZSWatch - Zephyr Smartwatch:
 * [twinoner/t0bybr_pim447](https://github.com/twinoner/t0bybr_pim447) - Pimoroni PIM447 trackball driver
 * [t0bybr/pim447](https://github.com/t0bybr/pim447) - Pimoroni PIM447 trackball driver
 * [sekigon-gonnoc/zmk-driver-paw3222](https://github.com/sekigon-gonnoc/zmk-driver-paw3222) - This driver enables the use of the PIXART PAW3222 optical sensor with the ZMK framework.
+* [george-norton/zmk-driver-pmw3360](https://github.com/george-norton/zmk-driver-pmw3360) - A ZMK driver for the Pixart PMW3360 optical mouse sensor
 
 #### Drivers Trackpoint
 * [badjeff/kb_zmk_ps2_mouse_trackpoint_driver](https://github.com/badjeff/kb_zmk_ps2_mouse_trackpoint_driver) - PS/2 trackpoint driver fork updated for mainline ZMK.
@@ -242,6 +249,7 @@ ZSWatch - Zephyr Smartwatch:
 * [badjeff/zmk-drv883x-driver](https://github.com/badjeff/zmk-drv883x-driver) - This module exposes DRV883x inputs via Zephyr's sensor_driver_api and key press behavior.
 * [petejohanson/ec-support-zmk-module](https://github.com/petejohanson/ec-support-zmk-module) - Electrostatic Capacitive (Topre) matrix scan implementation.
 * [sekigon-gonnoc/zmk-feature-non-lipo-battery-management](https://github.com/sekigon-gonnoc/zmk-feature-non-lipo-battery-management) - This module provides battery management functionality for non-LiPo batteries (such as alkaline or NiMH) in ZMK keyboards. It includes voltage monitoring, battery percentage calculation, and power management features.
+* [george-norton/zmk-driver-rp2040-sleep](https://github.com/george-norton/zmk-driver-rp2040-sleep) - ZMK driver to setup the RP2040 sleep mode
 
 ### Display Modules
 
@@ -356,9 +364,20 @@ ZSWatch - Zephyr Smartwatch:
 * [zmkfirmware/zmk-docker](https://github.com/zmkfirmware/zmk-docker) - Lightweight Docker images for ZMK
 * [urob/zmk-actions](https://github.com/urob/zmk-actions) - Github workflows for maintaining ZMK modules
 
+## Hardware Addons must-have
+* [george-norton/vik-hat](https://github.com/george-norton/vik-hat) - A ProMicro hat with a VIK connector
+* [hazels-garage/battpack](https://github.com/hazels-garage/battpack) - A 'backpack' for the nice!nano to make wiring up a battery cleaner on boards without native support
+* [Battery Helper](https://boardsource.xyz/products/battery-helper-ble-upgrade?_pos=10&_sid=cc9b52a5b&_ss=r) -  Upgrade your Bluetooth Low Energy (BLE) controller with the nope, a cutting-edge PCB that empowers you to seamlessly integrate a power switch into any keyboard PCB, regardless of the make or model.
+* [davidphilipbarr/nicehatharry](https://github.com/davidphilipbarr/nicehatharry) - A small 'hat' that sits ontop of the nice!nano to support a nice!view
+
 ## Community Pointing Projects as Computer Mouse
 * [badjeff/leylabella-zmk-config](https://github.com/badjeff/leylabella-zmk-config) - This is the ZMK firmware config repository for [leylabella](https://github.com/badjeff/leylabella), a computer mouse 🐭.
 * [badjeff/moudabella-zmk-config](https://github.com/badjeff/moudabella-zmk-config) - This is the ZMK firmware config repository for [moudabella](https://github.com/badjeff/moudabella), an open source bluetooth mouse 🐭 for CAD 🐱.
+* [george-norton/zmk-keyboard-ploopy](https://github.com/george-norton/zmk-keyboard-ploopy) - Work in progress ZMK firmware for Ploopy RP2040 devices
+* [M-Tolbot/zmk-comfig-mouset](https://github.com/M-Tolbot/zmk-comfig-mouset) - This keyboard/mouse hybrid is my vision of a split keyboard with trackball - Inspired by my Hertao mouse.
+* [tokyo2006/zmk-for-cygnus](https://github.com/tokyo2006/zmk-for-cygnus/tree/main) - The zmk configuration repo is here
+  * [tokyo2006/nano-trackball](https://github.com/tokyo2006/nano-trackball/tree/add_zmk_support) Using PMW3610 instead of ADNS-5050, Using type c instead of mini USB, Modify 3d model with Sharp3d, Using micro nrf52840 as MCU, Taobao link: Micro nrf52840, Aliexpress : Micro nrf52840, The schematic uses JLC EDA PRO so the project file is epro suffix.
+  * [Pull requests](https://github.com/ploopyco/nano-trackball/pull/8)
 
 ## Guides and Tutorials
 
@@ -428,6 +447,8 @@ Wired - Seeed XIAO Interconnect (RP2040 and others)
 
 ### Hardware Tutorials
 * [diimdeep/awesome-split-keyboards](https://github.com/diimdeep/awesome-split-keyboards) - A collection of ergonomic split keyboards
+* [GOLEM keyboard project](https://golem.hu/board/) - Split keyboard database
+  * [Typing tests and Keyboard sounds](https://golem.hu/sound/)
 * [ebastler/zmk-designguide](https://github.com/ebastler/zmk-designguide) - A short hardware-designguide for ZMK keyboards.
 * [Thumb cluster comfort from SplitKB made by jhelvy](https://compare.splitkb.com/) - Thumb cluster comfort is pretty individual based on hand size. You can use  scaled on a screen or printout to get an idea of how your hand fits different thumb clusters.
 * [ebastler/zmk-designguide](https://github.com/ebastler/zmk-designguide) - A community-written guide for designing PCBs intended to be used with ZMK.
@@ -467,6 +488,8 @@ Wired - Seeed XIAO Interconnect (RP2040 and others)
 * [taichan1113/AdeptBLE](https://github.com/taichan1113/AdeptBLE) - This is alpha version of Ploopy Adept BLE modification.
   * [Post on reddit](https://www.reddit.com/r/Trackballs/comments/rtmeeq/a_portable_trackball_i_wanted_zmk_powered_some/)
   * [Video and photos](https://imgur.com/gallery/zmk-trackball-prototype-RhXke0e)
+* [nrfconnect/sdk-nrf/../pmw3360](https://github.com/nrfconnect/sdk-nrf/tree/main/drivers/sensor/pmw3360) - PMW3360 mouse optical sensor
+  * [LicenseID:  LicenseRef-Nordic-5-Clause](https://github.com/nrfconnect/sdk-nrf/blob/main/LICENSE) - Copyright (c) 2018, Nordic Semiconductor ASA
 
 ## Related projects
 
