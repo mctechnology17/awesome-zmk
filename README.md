@@ -55,6 +55,7 @@ A curated list of awesome ZMK firmware resources, links, zmk-config's, zmk-drive
   - [Learn Touch Typing](#learn-touch-typing)
 - [Keyboard Shops](#keyboard-shops)
 - [Keyboard News](#keyboard-news)
+  - [Keyboard News Videos](#keyboard-news-videos)
 - [Projects using ZMK closed-source or not upstreamed](#projects-using-zmk-closed-source-or-not-upstreamed)
 - [Related projects](#related-projects)
 - [License](#license)
@@ -126,9 +127,11 @@ ZSWatch - Zephyr Smartwatch:
 * [sunaku/glove80-keymaps](https://github.com/sunaku/glove80-keymaps) - Glorious Engrammer keymap for Glove80 keyboard
 * [SethMilliken/zmk-config aka araxia](https://github.com/SethMilliken/zmk-config) - ZMK Firmware Configuration
 * [tokyo2006/zmk-config-corne](https://github.com/tokyo2006/zmk-config-corne) - ZMK Firmware Configuration
+* [a741725193/zmk-corne-oled](https://github.com/a741725193/zmk-corne-oled) - (Eyelash Peripherals) Corne ZMK Repository with oled screen
 * [a741725193/zmk-new_corne](https://github.com/a741725193/zmk-new_corne) - ZMK Firmware Configuration
 * [eigatech/zmk-config](https://github.com/eigatech/zmk-config) - ZMK Firmware Configuration
 * [MickiusMousius/RolioFirmware](https://github.com/MickiusMousius/RolioFirmware) - Firmware for the Rolio split wireless keyboard.
+* [kumamuk-git/zmk-config-roBa](https://github.com/kumamuk-git/zmk-config-roBa) - zmk-config-roBa
 
 ### Split Wired
 
@@ -197,6 +200,7 @@ ZSWatch - Zephyr Smartwatch:
 * [englmaxi/zmk-hid-trackball-interface](https://github.com/englmaxi/zmk-hid-trackball-interface) - ZMK trackball interface using HID indicators
 * [elpekenin/zmk-userspace](https://github.com/elpekenin/zmk-userspace) - "tiny" and "useful" bits to reuse across ZMK boards
 * [george-norton/zmk-behavior-sensor-attr-cycle](https://github.com/george-norton/zmk-behavior-sensor-attr-cycle) - A ZMK behaviour for cycling sensor attributes
+* [a741725193/zmk-tog-io](https://github.com/a741725193/zmk-tog-io) - simple behavior that toggles io on falling and rising edge of the keyswitch press
 
 ### Drivers
 
@@ -214,8 +218,12 @@ ZSWatch - Zephyr Smartwatch:
 * [badjeff/zmk-paw3395-driver](https://github.com/badjeff/zmk-paw3395-driver) - This is an ZMK pointer input module, that grant ability to call a non-disclosed PAW3395 driver library.
   * [badjeff/paw3395-pcb](https://github.com/badjeff/paw3395-pcb) - PixArt PAW3395DM-T6QU low power laser mouse sensor breakout board.
 * [inorichi/zmk-pmw3610-driver](https://github.com/inorichi/zmk-pmw3610-driver) - PMW3610 sensor driver.
-* [twinoner/t0bybr_pim447](https://github.com/twinoner/t0bybr_pim447) - Pimoroni PIM447 trackball driver
+* [kzyz/zmk-az1uball-driver](https://github.com/kzyz/zmk-az1uball-driver.git) - A 16x16mm I2C trackball module 5,3mm (0x0A) compatible with 3.3V/5V, consuming ~8mA, offering PIM447 data/power compatibility with higher precision and 50% less power (non-illuminated), detailed on GitHub at [palette-system/az1uball](https://github.com/palette-system/az1uball)
+  * [kzyz/corne-ulp-ball](https://github.com/kzyz/corne-ulp-ball.git) - example with a xiao MCU + zmk 0.3
+  * [buy a AZ1UBALL on booth (japan)](https://booth.pm/ja/items/4202085?srsltid=AfmBOorsZkPYZq80An_3UKa-HHpciWQeS2lXHikH4J_Y13bmAngWI2rI)
 * [t0bybr/pim447](https://github.com/t0bybr/pim447) - Pimoroni PIM447 trackball driver
+   * [t0bybr/zmk-config-kailhx](https://github.com/t0bybr/zmk-config-kailhx)
+   * [Pimoroni PIM447 trackball driver use docs](https://github.com/cdc-mkb/zmk/commit/eb8889883d1e91f58a42f0babc17a10fa3fa1b4a)
 * [sekigon-gonnoc/zmk-driver-paw3222](https://github.com/sekigon-gonnoc/zmk-driver-paw3222) - This driver enables the use of the PIXART PAW3222 optical sensor with the ZMK framework.
 * [george-norton/zmk-driver-pmw3360](https://github.com/george-norton/zmk-driver-pmw3360) - A ZMK driver for the Pixart PMW3360 optical mouse sensor
 
@@ -225,6 +233,7 @@ ZSWatch - Zephyr Smartwatch:
 
 #### Drivers Analog Joystick
 * [badjeff/zmk-analog-input-driver](https://github.com/badjeff/zmk-analog-input-driver) - This driver groups ADC io channels into single input event for input subsystem.
+* [letmegobacktosleep/zmk-keyboard-joystick-wasd](https://github.com/letmegobacktosleep/zmk-keyboard-joystick-wasd) - An attempt at making a joystick act as a four-directional switch, in a keyboard.
 
 #### Drivers Haptic
 * [badjeff/zmk-drv2605-driver](https://github.com/badjeff/zmk-drv2605-driver/) - DRV2605 haptic feedback driver.
@@ -242,6 +251,7 @@ ZSWatch - Zephyr Smartwatch:
 * [joelspadin/zmk-keyboards](https://github.com/joelspadin/zmk-keyboards) - marten_numpad and indicator LEDs driver
 * [dhruvinsh/zmk-config](https://github.com/dhruvinsh/zmk-config/tree/legacy) - **legacy branch** This repository tracks my keyboard configuration.
 * [englmaxi/zmk-config](https://github.com/englmaxi/zmk-config/tree/main/boards/shields/led_indicator) - single LED indicator widget based on [caksoylar/zmk-rgbled-widget](https://github.com/caksoylar/zmk-rgbled-widget)
+* [4mplelab/zmk-feature-charge-indicator](https://github.com/4mplelab/zmk-feature-charge-indicator) - A ZMK feature module to indicate battery charging status on an RGB LED, designed to coexist with the `rgbled_widget`
 
 #### Drivers Others
 * [badjeff/zmk-adns9800-driver](https://github.com/badjeff/zmk-adns9800-driver) - ADNS9800 sensor driver.
@@ -280,10 +290,14 @@ ZSWatch - Zephyr Smartwatch:
 * [mctechnology17/zmk-dongle-display-view](https://github.com/mctechnology17/zmk-dongle-display-view) - horizontal widgets for keyboards with dongles, splits and non-splits using the nice!view (bongocat, wpm, caps, batt, etc.)
 * [englmaxi/zmk-dongle-display](https://github.com/englmaxi/zmk-dongle-display) - Custom status screen for zmk dongles
 * [carrefinho/prospector-zmk-module](https://github.com/carrefinho/prospector-zmk-module) - ZMK module for the Prospector dongle
+* [t-ogura/prospector-zmk-module](https://github.com/t-ogura/prospector-zmk-module) - Keyboard broadcasts status via BLE Advertisement (observer mode)
+  * [t-ogura/zmk-config-prospector](https://github.com/t-ogura/zmk-config-prospector) - Prospector only listens - does NOT connect to keyboard
 * [janpfischer/zmk-dongle-screen](https://github.com/janpfischer/zmk-dongle-screen.git) - YADS - Yet another Dongle Screen for ZMK
 * [victorlucachi/charybdis-zmk-module](https://github.com/victorlucachi/charybdis-zmk-module) - zmk module for bkb charybdis mini/nano with pmw3610 and xiao/nicenano dongle
 * [joaopedropio/snake-module](https://github.com/joaopedropio/snake-module.git) - Snake Dongle Shell 🐍
 * [dhruvinsh/zmk-prospector](https://github.com/dhruvinsh/zmk-prospector) - Prospector but for ST7735S display
+* [rschenk/zmk-component-raytac-dongle](https://github.com/rschenk/zmk-component-raytac-dongle) - ZMK module to support the Raytac MDBT50Q-RX USB key as a dongle
+  * [Please read the section "Caveat: Buy One With A UF2 Bootloader Installed"](https://github.com/rschenk/zmk-component-raytac-dongle?tab=readme-ov-file#caveat-buy-one-with-auf2-bootloader-installed)
 
 ##### Dongles Design
 * [carrefinho/prospector](https://github.com/carrefinho/prospector) - Desktop ZMK Dongle with color 1.69-inch IPS LCD screen with curved cover glass screen
@@ -367,7 +381,7 @@ ZSWatch - Zephyr Smartwatch:
 ## Hardware Addons must-have
 * [george-norton/vik-hat](https://github.com/george-norton/vik-hat) - A ProMicro hat with a VIK connector
 * [hazels-garage/battpack](https://github.com/hazels-garage/battpack) - A 'backpack' for the nice!nano to make wiring up a battery cleaner on boards without native support
-* [Battery Helper](https://boardsource.xyz/products/battery-helper-ble-upgrade?_pos=10&_sid=cc9b52a5b&_ss=r) -  Upgrade your Bluetooth Low Energy (BLE) controller with the nope, a cutting-edge PCB that empowers you to seamlessly integrate a power switch into any keyboard PCB, regardless of the make or model.
+* [boardsource/Battery Helper](https://boardsource.xyz/products/battery-helper-ble-upgrade?_pos=10&_sid=cc9b52a5b&_ss=r) - Upgrade your Bluetooth Low Energy (BLE) controller with the nope, a cutting-edge PCB that empowers you to seamlessly integrate a power switch into any keyboard PCB, regardless of the make or model.
 * [davidphilipbarr/nicehatharry](https://github.com/davidphilipbarr/nicehatharry) - A small 'hat' that sits ontop of the nice!nano to support a nice!view
 
 ## Community Pointing Projects as Computer Mouse
@@ -468,6 +482,10 @@ Wired - Seeed XIAO Interconnect (RP2040 and others)
 * [kbd.news](https://kbd.news/) - KBD.news is a blog and newsletter on DIY mechanical keyboards. A hand-picked selection of posts from a keyboard enthusiast's perspective
 * [ErgoMechKeyboards/reddit.com](https://www.reddit.com/r/ErgoMechKeyboards/) - A community focused around Ergonomic Mechanical Keyboards and strange input devices. Embrace the jank. Created Sep 2, 2019
 * [crkbd/reddit.com](https://www.reddit.com/r/crkbd/) - crkbd, a.k.a. Corne Keyboard https://github.com/foostan/crkbd https://discord.com/invite/aWCZWnS Created Dec 16, 2019
+
+### Keyboard News Videos
+* [Building Open Keyboards with ZMK & Zephyr // Zephyr Tech Talk #010 ](https://www.youtube.com/live/Eb04hyUY4BE?si=l4-114QAmFnJbyc7&t=1) - Tune in on Wednesday, January 24 (9:00 AM EST / 3:00 PM CET) for a new Zephyr Tech Talk live stream where Benjamin will be joined by Pete Johanson, creator and project lead of the ZMK project.
+* [Naya Create: From Hate To Love To Regret - Full Review](https://youtu.be/gqzrcoNpgGU?si=cVFWv9tcqKLYdO14) - The Naya Create is/was an amazing feat, it actually delivered on almost all of the promises. However, there are quite a few hardware issues, some which can be fixed others you'll have to live with.
 
 <!-- ### Keyboard News ErgoMechKeyboards -->
 <!-- REDDIT:START -->
