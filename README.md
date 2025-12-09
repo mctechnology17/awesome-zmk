@@ -45,6 +45,7 @@ A curated list of awesome ZMK firmware resources, links, zmk-config's, zmk-drive
 - [Hardware Addons must-have](#hardware-addons-must-have)
 - [Community Pointing Projects as Computer Mouse](#community-pointing-projects-as-computer-mouse)
 - [Guides and Tutorials](#guides-and-tutorials)
+  - [Bootloader and Reset](#bootloader-and-reset)
   - [Solder and Desolder Tools](#solder-and-desolder-tools)
   - [How to Solder](#how-to-solder)
   - [How to Desolder](#how-to-desolder)
@@ -394,6 +395,13 @@ ZSWatch - Zephyr Smartwatch:
   * [Pull requests](https://github.com/ploopyco/nano-trackball/pull/8)
 
 ## Guides and Tutorials
+
+### Bootloader and Reset
+* [adafruit/RPI-RP2](https://learn.adafruit.com/adafruit-kb2040/circuitpython) - for rp2040 and kb2040. If your board ever gets into a really weird state and CIRCUITPY doesn't show up as a disk drive after installing CircuitPython, try loading this 'nuke' UF2 to RPI-RP2. which will do a 'deep clean' on your Flash Memory. You will lose all the files on the board, but at least you'll be able to revive it!
+* [circuitpython/Update UF2 Bootloader](https://circuitpython.org/downloads) - After you update, check INFO_UF2.TXT to verify that the bootloader version has been updated.
+* [circuitpython/nice_nano/Update UF2 Bootloader](https://circuitpython.org/board/nice_nano/) - After you update, check INFO_UF2.TXT to verify that the bootloader version has been updated.
+* [circuitpython/supermini_nrf52840/Update UF2 Bootloader](https://circuitpython.org/board/supermini_nrf52840/) - After you update, check INFO_UF2.TXT to verify that the bootloader version has been updated.
+* [nicekeyboards/nice-nano/troubleshooting](https://nicekeyboards.com/docs/nice-nano/troubleshooting) - Troubleshooting your nice!nano often falls on to the firmware of choice, but a few directly hardware related items can be addressed.
 
 ### Solder and Desolder Tools
 > NOTE
