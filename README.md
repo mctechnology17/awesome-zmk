@@ -133,6 +133,7 @@ ZSWatch - Zephyr Smartwatch:
 * [eigatech/zmk-config](https://github.com/eigatech/zmk-config) - ZMK Firmware Configuration
 * [MickiusMousius/RolioFirmware](https://github.com/MickiusMousius/RolioFirmware) - Firmware for the Rolio split wireless keyboard.
 * [kumamuk-git/zmk-config-roBa](https://github.com/kumamuk-git/zmk-config-roBa) - zmk-config-roBa
+* [aroum/zmk-enki42-dongle](https://github.com/aroum/zmk-enki42-dongle) - ZMK config for enki42 keyboard with dongle
 
 ### Split Wired
 
@@ -208,6 +209,7 @@ ZSWatch - Zephyr Smartwatch:
 #### Drivers Trackpad
 * [petejohanson/cirque-input-module](https://github.com/petejohanson/cirque-input-module) - Zephyr module for the Cirque Pinnacle input driver.
 * [AYM1607/zmk-driver-azoteq-iqs5xx](https://github.com/AYM1607/zmk-driver-azoteq-iqs5xx) - ZMK driver for Azoteq IQS5XX trackpads
+* [Ahmed-M-Osman1/zmk-driver-azoteq](https://github.com/Ahmed-M-Osman1/zmk-driver-azoteq) - ZMK driver for Azoteq IQS5XX trackpads
 * [sekigon-gonnoc/iqs7211e-trackpad-module](https://github.com/sekigon-gonnoc/iqs7211e-trackpad-module) - iQS7211E sensor driver with 30 mm diameter trackpad, low consumption (~ 1.5 mA) and admits multitactile (two points).
 * [ZitaoTech/zmk-config-9981-pro](https://github.com/ZitaoTech/zmk-config-9981-pro/tree/main) - zmk firmware config for 9981 keyboard with trackpad(pro version)
   * [Full Guide](https://github.com/ZitaoTech/9981_BLE_USB_Keyboard_Pro/tree/main) - The fully open-sourced P9981 BLE&USB Keyboard is the smallest ZMK-powered keyboard mouse combo and features n-Key rollover that other original blackberry keyboards don't have!
@@ -253,6 +255,7 @@ ZSWatch - Zephyr Smartwatch:
 * [dhruvinsh/zmk-config](https://github.com/dhruvinsh/zmk-config/tree/legacy) - **legacy branch** This repository tracks my keyboard configuration.
 * [englmaxi/zmk-config](https://github.com/englmaxi/zmk-config/tree/main/boards/shields/led_indicator) - single LED indicator widget based on [caksoylar/zmk-rgbled-widget](https://github.com/caksoylar/zmk-rgbled-widget)
 * [4mplelab/zmk-feature-charge-indicator](https://github.com/4mplelab/zmk-feature-charge-indicator) - A ZMK feature module to indicate battery charging status on an RGB LED, designed to coexist with the `rgbled_widget`
+* [aroum/zmk-kabarga](https://github.com/aroum/zmk-kabarga) - This project features the implementation of an LED status indicator. A similar indicator approach is utilized across many of my other projects (fEnki, mEnki, gbEnki, yolochka, etc.).
 
 #### Drivers Others
 * [badjeff/zmk-adns9800-driver](https://github.com/badjeff/zmk-adns9800-driver) - ADNS9800 sensor driver.
@@ -352,6 +355,7 @@ ZSWatch - Zephyr Smartwatch:
 * [joelspadin/zmk-locale-generator](https://github.com/joelspadin/zmk-locale-generator) - Python module to generate localized keyboard layout headers for ZMK Firmware.
 * [An experimental tool to create ZMK shields by Genteure](https://shield-wizard.genteure.workers.dev) - A web-based tool to create ZMK configurations for custom keyboards.
 * [MrMarble/zmk-viewer](https://github.com/MrMarble/zmk-viewer) - cli tool to generate preview images from a zmk .keymap file
+* [efogdev/zmk-keymap-shell](https://github.com/efogdev/zmk-keymap-shell) - Shell commands and behaviors (ToDo) for managing multiple keymap profiles on ZMK keyboards.
 
 ### Power Estimation
 
@@ -361,6 +365,7 @@ ZSWatch - Zephyr Smartwatch:
 * [kot149/zmk-battery-center](https://github.com/kot149/zmk-battery-center) - A system tray app to monitor the battery level of ZMK-based keyboards for MacOS/Windows
 * [Maksim-Isakau/zmk-split-battery](https://github.com/Maksim-Isakau/zmk-split-battery) ZMK Split Battery Status in system tray for Windows
 * [mh4x0f/zmkBATx](https://github.com/mh4x0f/zmkBATx) - Opensource tool for peripheral battery monitoring zmk split keyboard over BLE for linux
+* [JanValiska/ZmkBatteryClient](https://github.com/JanValiska/ZmkBatteryClient) - Waybar custom module for ZMK powered keyboards
 
 
 ### Display Utilities
@@ -378,6 +383,7 @@ ZSWatch - Zephyr Smartwatch:
 * [zmkfirmware/zmk-cli](https://github.com/zmkfirmware/zmk-cli) - Command line tool for ZMK Firmware
 * [zmkfirmware/zmk-docker](https://github.com/zmkfirmware/zmk-docker) - Lightweight Docker images for ZMK
 * [urob/zmk-actions](https://github.com/urob/zmk-actions) - Github workflows for maintaining ZMK modules
+* [aroum/cn_tester](https://github.com/aroum/cn_tester) - A tool for testing n!n pins and Chinese-manufactured clones.
 
 ## Hardware Addons must-have
 * [george-norton/vik-hat](https://github.com/george-norton/vik-hat) - A ProMicro hat with a VIK connector
@@ -393,6 +399,7 @@ ZSWatch - Zephyr Smartwatch:
 * [tokyo2006/zmk-for-cygnus](https://github.com/tokyo2006/zmk-for-cygnus/tree/main) - The zmk configuration repo is here
   * [tokyo2006/nano-trackball](https://github.com/tokyo2006/nano-trackball/tree/add_zmk_support) Using PMW3610 instead of ADNS-5050, Using type c instead of mini USB, Modify 3d model with Sharp3d, Using micro nrf52840 as MCU, Taobao link: Micro nrf52840, Aliexpress : Micro nrf52840, The schematic uses JLC EDA PRO so the project file is epro suffix.
   * [Pull requests](https://github.com/ploopyco/nano-trackball/pull/8)
+* [aroum/ufa](https://github.com/aroum/ufa) - Focuses on porting the ZMK firmware to commercial gaming mice.
 
 ## Guides and Tutorials
 
@@ -402,6 +409,7 @@ ZSWatch - Zephyr Smartwatch:
 * [circuitpython/nice_nano/Update UF2 Bootloader](https://circuitpython.org/board/nice_nano/) - After you update, check INFO_UF2.TXT to verify that the bootloader version has been updated.
 * [circuitpython/supermini_nrf52840/Update UF2 Bootloader](https://circuitpython.org/board/supermini_nrf52840/) - After you update, check INFO_UF2.TXT to verify that the bootloader version has been updated.
 * [nicekeyboards/nice-nano/troubleshooting](https://nicekeyboards.com/docs/nice-nano/troubleshooting) - Troubleshooting your nice!nano often falls on to the firmware of choice, but a few directly hardware related items can be addressed.
+* [aroum/nRF52_Bootloader_custom_LED](https://github.com/aroum/nRF52_Bootloader_custom_LED) - Contains various low-level modifications and hacks, such as converting the reset pin into a standard GPIO and implementing extended indication during Device Firmware Update (DFU) mode.
 
 ### Solder and Desolder Tools
 > NOTE
@@ -516,6 +524,10 @@ Wired - Seeed XIAO Interconnect (RP2040 and others)
   * [Video and photos](https://imgur.com/gallery/zmk-trackball-prototype-RhXke0e)
 * [nrfconnect/sdk-nrf/../pmw3360](https://github.com/nrfconnect/sdk-nrf/tree/main/drivers/sensor/pmw3360) - PMW3360 mouse optical sensor
   * [LicenseID:  LicenseRef-Nordic-5-Clause](https://github.com/nrfconnect/sdk-nrf/blob/main/LICENSE) - Copyright (c) 2018, Nordic Semiconductor ASA
+* [rianadon/zmk](https://github.com/rianadon/zmk/tree/main) - fork for cosmos
+  * [ryanis/Custom-Build (web)](https://ryanis.cool/cosmos/) - Custom-Build A Keyboard Fit To You. Don't Settle. For One-Size-Fits-All
+  * [Lemon Wireless Microcontroller](https://ryanis.cool/cosmos/lemon/) - Store for buy the MCU
+
 
 ## Related projects
 
