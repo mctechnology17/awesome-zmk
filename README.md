@@ -286,7 +286,8 @@ ZSWatch - Zephyr Smartwatch:
 * [whoop-t/nice-luffy-gear-five](https://github.com/whoop-t/nice-luffy-gear-five) - luffy gear five
 * [Jestar342/nice-view-spacemarine](https://github.com/Jestar342/nice-view-spacemarine) - This is a base repo to help anyone get started creating their own images/animations for their nice!view.
 * [kevinpastor/nice-view-elemental](https://github.com/kevinpastor/nice-view-elemental) - A bold while minimalistic interface for your keyboard's display
-
+* [LostQuasar/zmk-component-adafruit-sharp](https://github.com/LostQuasar/zmk-component-adafruit-sharp) - Adafruit 144x168px SHARP Memory LCD Module for ZMK
+* 
 #### Dongles Modules
 > NOTE
 > ZMK Supports Dongle scheme for 3 controllers (host + 2 halves). It's a little bit more battery friendly (up to a month on a 100 mAh) than a battery-powered BT host (up to 7 days) [^7].
