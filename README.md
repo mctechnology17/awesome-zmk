@@ -203,6 +203,7 @@ ZSWatch - Zephyr Smartwatch:
 * [elpekenin/zmk-userspace](https://github.com/elpekenin/zmk-userspace) - "tiny" and "useful" bits to reuse across ZMK boards
 * [george-norton/zmk-behavior-sensor-attr-cycle](https://github.com/george-norton/zmk-behavior-sensor-attr-cycle) - A ZMK behaviour for cycling sensor attributes
 * [a741725193/zmk-tog-io](https://github.com/a741725193/zmk-tog-io) - simple behavior that toggles io on falling and rising edge of the keyswitch press
+* [mjmjm0101/zmk-input-processor-scroll-inertia](https://github.com/mjmjm0101/zmk-input-processor-scroll-inertia) - iOS-style inertial scrolling for ZMK trackballs.
 
 ### Drivers
 
