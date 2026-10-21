@@ -366,6 +366,7 @@ ZSWatch - Zephyr Smartwatch:
 * [Maksim-Isakau/zmk-split-battery](https://github.com/Maksim-Isakau/zmk-split-battery) ZMK Split Battery Status in system tray for Windows
 * [mh4x0f/zmkBATx](https://github.com/mh4x0f/zmkBATx) - Opensource tool for peripheral battery monitoring zmk split keyboard over BLE for linux
 * [JanValiska/ZmkBatteryClient](https://github.com/JanValiska/ZmkBatteryClient) - Waybar custom module for ZMK powered keyboards
+* [mcasdfgf/zmkbat](https://github.com/mcasdfgf/zmkbat) - Console battery monitor for both halves of a ZMK split keyboard over BlueZ D-Bus, with polybar, waybar, i3blocks, plain-text and JSON output
 
 
 ### Display Utilities
