@@ -527,6 +527,8 @@ Wired - Seeed XIAO Interconnect (RP2040 and others)
 * [rianadon/zmk](https://github.com/rianadon/zmk/tree/main) - fork for cosmos
   * [ryanis/Custom-Build (web)](https://ryanis.cool/cosmos/) - Custom-Build A Keyboard Fit To You. Don't Settle. For One-Size-Fits-All
   * [Lemon Wireless Microcontroller](https://ryanis.cool/cosmos/lemon/) - Store for buy the MCU
+* [Wobkey Crush80 Pro](https://www.wobkey.com/) - A hot-swappable 80% mechanical keyboard that ships with closed firmware.
+  * [RitwickVerma/Crush80_ZMK](https://github.com/RitwickVerma/Crush80_ZMK) - Open ZMK port for the Crush80 Pro (Telink TLSR9511, RISC-V) with full RGB-per-key, OpenRGB, VIA, ZMK Studio and single-cable DFU updates.
 
 
 ## Related projects
