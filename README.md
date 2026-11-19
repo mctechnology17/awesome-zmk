@@ -1,3 +1,23 @@
+<!-- mc-follow-top:start -->
+<div align="center">
+
+  <a href="https://youtube.com/@mctechnology17">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/mctechnology17/mctechnology17/blob/main/src/mctechnology_banner_dark.png?raw=true" />
+      <img alt="MC Technology" width="420px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/mctechnology_banner_light.png?raw=true" />
+    </picture>
+  </a>
+  <br>
+  <a href="https://youtube.com/@mctechnology17"><img align="center" alt="MC Technology | YouTube" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/youtube.png" /></a>
+  <a href="https://www.instagram.com/mctechnology17/"><img align="center" alt="MC Technology | Instagram" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/instagram.png" /></a>
+  <a href="https://www.facebook.com/mctechnology17/"><img align="center" alt="MC Technology | Facebook" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/facebook.png" /></a>
+  <a href="https://www.tiktok.com/@mctechnology17"><img align="center" alt="MC Technology | TikTok" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/tiktok.png" /></a>
+  <a href="https://t.me/mctechnology17"><img align="center" alt="MC Technology | Telegram" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/telegram.png" /></a>
+  <a href="https://discord.gg/7zs2fezBbv"><img align="center" alt="MC Technology | Discord" width="22px" src="https://github.com/mctechnology17/mctechnology17/blob/main/src/discord.png" /></a>
+
+</div>
+<!-- mc-follow-top:end -->
+
 <h3 align="center"><img src="images/logo2.png" alt="logo2"></h3>
 
 # Awesome ZMK
@@ -269,6 +289,7 @@ ZSWatch - Zephyr Smartwatch:
 
 * [mctechnology17/zmk-nice-oled](https://github.com/mctechnology17/zmk-nice-oled) - vertical widgets for oled and niceview screens using zmk (for split and non-split keyboards)
 * [mctechnology17/zmk-dongle-display-view](https://github.com/mctechnology17/zmk-dongle-display-view) - horizontal widgets for keyboards with dongles, splits and non-splits using the nice!view (bongocat, wpm, caps, batt, etc.)
+* [mctechnology17/zmk-peripheral-status-sync](https://github.com/mctechnology17/zmk-peripheral-status-sync) - shows the state of the central half (WPM, modifiers, BLE profile, layer, battery, HID indicators) on the peripheral half of a split keyboard
 * [MickiusMousius/RolioFirmware (for Vista508)](https://github.com/MickiusMousius/RolioFirmware) - The Vista508 is a low-power, high refresh rate display meant to replace I2C OLEDs traditionally used.
 * [M165437/nice-view-gem](https://github.com/M165437/nice-view-gem) - A sleek customization for the nice!view shield
 * [zzeneg/zmk-nice-view-hid](https://github.com/zzeneg/zmk-nice-view-hid) - ZMK module for nice!view widget with Raw HID functionality
@@ -535,6 +556,23 @@ Wired - Seeed XIAO Interconnect (RP2040 and others)
 * [iDoka/awesome-nRF5](https://github.com/iDoka/awesome-nRF5) - curated resources for nRF5 (libraries, examples, build helpers).
 * [dotintent/awesome-ble](https://github.com/dotintent/awesome-ble) - general BLE resources (useful Nordic links included).
 * [whoop-t/nice-shield-collection](https://github.com/whoop-t/nice-shield-collection) - A collection of links to nice!view shield designs
+
+<!-- mc-follow:start -->
+## Support this project
+
+This is a personal project that I build in my free time. If it is useful to
+you, the best way to help is to follow and subscribe:
+
+[YouTube](https://youtube.com/@mctechnology17) · [Instagram](https://www.instagram.com/mctechnology17/) · [Facebook](https://www.facebook.com/mctechnology17/) · [TikTok](https://www.tiktok.com/@mctechnology17)
+
+News and community: [Telegram](https://t.me/mctechnology17) · [Discord](https://discord.gg/7zs2fezBbv)
+
+I make videos about split keyboards, ZMK and open source (in Spanish, long
+videos with English subtitles). Every follow and every subscription helps me a
+lot and keeps me motivated to bring more to the open source community.
+
+Thank you for every report and every issue: they make these projects better.
+<!-- mc-follow:end -->
 
 ## License
 
