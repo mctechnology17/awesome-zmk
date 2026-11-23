@@ -309,7 +309,7 @@ ZSWatch - Zephyr Smartwatch:
 * [Jestar342/nice-view-spacemarine](https://github.com/Jestar342/nice-view-spacemarine) - This is a base repo to help anyone get started creating their own images/animations for their nice!view.
 * [kevinpastor/nice-view-elemental](https://github.com/kevinpastor/nice-view-elemental) - A bold while minimalistic interface for your keyboard's display
 * [LostQuasar/zmk-component-adafruit-sharp](https://github.com/LostQuasar/zmk-component-adafruit-sharp) - Adafruit 144x168px SHARP Memory LCD Module for ZMK
-* 
+
 #### Dongles Modules
 > NOTE
 > ZMK Supports Dongle scheme for 3 controllers (host + 2 halves). It's a little bit more battery friendly (up to a month on a 100 mAh) than a battery-powered BT host (up to 7 days) [^7].
@@ -325,6 +325,7 @@ ZSWatch - Zephyr Smartwatch:
 * [dhruvinsh/zmk-prospector](https://github.com/dhruvinsh/zmk-prospector) - Prospector but for ST7735S display
 * [rschenk/zmk-component-raytac-dongle](https://github.com/rschenk/zmk-component-raytac-dongle) - ZMK module to support the Raytac MDBT50Q-RX USB key as a dongle
   * [Please read the section "Caveat: Buy One With A UF2 Bootloader Installed"](https://github.com/rschenk/zmk-component-raytac-dongle?tab=readme-ov-file#caveat-buy-one-with-auf2-bootloader-installed)
+* [alex-shattu/zmk-dongle-keymap-sysmon](https://github.com/alex-shattu/zmk-dongle-keymap-sysmon) - Keymap display and host system monitor on one 240x240 ST7789V panel, with macOS/Linux daemons feeding CPU, RAM, disk and network over USB serial
 
 ##### Dongles Design
 * [carrefinho/prospector](https://github.com/carrefinho/prospector) - Desktop ZMK Dongle with color 1.69-inch IPS LCD screen with curved cover glass screen
@@ -406,6 +407,7 @@ ZSWatch - Zephyr Smartwatch:
 ### CLI and Utilities
 * [zmkfirmware/zmk-cli](https://github.com/zmkfirmware/zmk-cli) - Command line tool for ZMK Firmware
 * [zmkfirmware/zmk-docker](https://github.com/zmkfirmware/zmk-docker) - Lightweight Docker images for ZMK
+* [beta-tank/zmk-config-devcontainer](https://github.com/beta-tank/zmk-config-devcontainer) - ZMK config template with GitHub Actions, Devcontainer and GitHub Codespaces integrations, to build firmware without setting up a local toolchain
 * [urob/zmk-actions](https://github.com/urob/zmk-actions) - Github workflows for maintaining ZMK modules
 * [aroum/cn_tester](https://github.com/aroum/cn_tester) - A tool for testing n!n pins and Chinese-manufactured clones.
 
